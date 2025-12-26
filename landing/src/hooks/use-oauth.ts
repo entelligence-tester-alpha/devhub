@@ -15,8 +15,7 @@ export function useOAuth() {
     gitHubAppType: GitHubAppType | 'both',
     options: { appToken?: string; scope?: string[] | undefined } = {},
   ) {
-    if (isExecutingOAuth) return
-
+    
     setIsExecutingOAuth(true)
 
     const { appToken, scope = ['user:email'] } = options
